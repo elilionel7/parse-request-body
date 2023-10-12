@@ -26,7 +26,12 @@ function fifthStep(input) {
 }
 
 function parseBody(str) {
-  // Your code here
+  const stepOneResult = firstStep(str);
+  const stepTwoResult = secondStep(stepOneResult);
+  const stepThreeResult = thirdStep(stepTwoResult);
+  const stepFourResult = fourthStep(stepThreeResult);
+  const fifthStepResult = fifthStep(stepFourResult);
+  return fifthStepResult;
 }
 
 /******************************************************************************/
