@@ -10,14 +10,19 @@ function secondStep(input) {
 
 function thirdStep(input) {
   // Your code here
-  return input.map((el) => el.join(", ").replace(/\+/g, " ").split(", "))}
+  return input.map((el) => el.join(", ").replace(/\+/g, " ").split(", "))
+}
 
 function fourthStep(input) {
-  // Your code here
+  return input.map((el) => decodeURIComponent(el.join(", ")).split(", "))
 }
 
 function fifthStep(input) {
-  // Your code here
+  return input.reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+
+  }, {});
 }
 
 function parseBody(str) {
